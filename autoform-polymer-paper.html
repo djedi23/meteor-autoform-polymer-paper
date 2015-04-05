@@ -1,0 +1,32 @@
+
+<template name="quickForm_paper">
+  {{#autoForm this.qfAutoFormContext}}
+  {{> afQuickFields}}
+  {{#if qfShouldRenderButton}}
+  <div>
+    <paper-button raised id="qfSubmit" type="submit" {{submitButtonAtts}}>
+      {{#with ../atts.buttonContent}}
+      {{this}}
+      {{else}}
+      Submit
+      {{/with}}
+    </paper-button>
+  </div>
+  {{/if}}
+  {{/autoForm}}
+</template>
+
+
+
+
+
+<template name="afInput_paper">
+  <paper-input-decorator floatingLabel label="{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}"
+				       isInvalid="{{afFieldIsInvalid name=this.atts.name}}"
+				       error="{{afFieldMessage name=this.atts.name}}"
+				       >
+    <input is="core-input" committedValue="{{this.value}}" {{atts}}/>
+  </paper-input-decorator>
+</template>
+
+

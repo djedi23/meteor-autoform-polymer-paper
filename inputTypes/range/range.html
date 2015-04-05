@@ -1,0 +1,9 @@
+<template name="afInputRange_paper">
+  <paper-input-decorator floatingLabel label="{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}"
+				       isInvalid="{{afFieldIsInvalid name=this.atts.name}}"
+				       error="{{afFieldMessage name=this.atts.name}}"
+				       class="nounderline"
+				       >
+    <paper-slider value="{{this.value}}" min="{{this.min}}" max="{{this.max}}" {{this.atts}} pin></paper-slider>
+  </paper-input-decorator>
+</template>

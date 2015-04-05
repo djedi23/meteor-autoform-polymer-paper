@@ -1,0 +1,10 @@
+<template name="afTextarea_paper">
+  <paper-input-decorator  label="{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}"
+			  isInvalid="{{afFieldIsInvalid name=this.atts.name}}"
+			  error="{{afFieldMessage name=this.atts.name}}"
+			  >
+    <paper-autogrow-textarea>
+      <textarea committedValue="{{this.value}}" {{atts}}>{{this.value}}</textarea>
+    </paper-autogrow-textarea>
+  </paper-input-decorator>
+</template>

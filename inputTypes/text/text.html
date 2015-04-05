@@ -1,0 +1,8 @@
+<template name="afInputText_paper">
+  <paper-input-decorator floatingLabel label="{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}"
+				       isInvalid="{{afFieldIsInvalid name=this.atts.name}}"
+				       error="{{afFieldMessage name=this.atts.name}}"
+				       >
+    <input is="core-input" type="text" committedValue="{{this.value}}" {{atts}}/>
+  </paper-input-decorator>
+</template>

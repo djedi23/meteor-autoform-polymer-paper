@@ -1,0 +1,11 @@
+<template name="afBooleanSelect_paper">
+  <paper-dropdown-menu  {{atts}}>
+    <paper-dropdown class="dropdown">
+      <core-menu class="menu">
+	{{#each this.items}}
+	<paper-item {{optionAtts}}>{{this.label}}</paper-item>
+	{{/each}}
+      </core-menu>
+    </paper-dropdown>
+  </paper-dropdown-menu>
+</template>

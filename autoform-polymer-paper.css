@@ -1,0 +1,4 @@
+paper-input-decorator.nounderline /deep/ .unfocused-underline {
+    /* line color when the input is unfocused */
+    background-color: transparent;
+}

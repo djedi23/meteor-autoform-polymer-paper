@@ -1,0 +1,11 @@
+<template name="afCheckbox_paper">
+  <core-label horizontal layout>
+    <paper-checkbox for checked="{{this.value}}" {{atts}} style="padding:0px 20px 0px 0">
+      <input type="checkbox" {{atts}}/>
+    </paper-checkbox>
+    <div vertival layout>
+      <div>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</div>
+      {{#if afFieldIsInvalid name=this.atts.name}}<div>{{afFieldMessage name=this.atts.name}}</div>{{/if}}
+    </div>
+  </core-label>
+</template>
